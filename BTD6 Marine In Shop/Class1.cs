@@ -10,7 +10,7 @@ using Harmony;
 using Il2CppSystem.Collections.Generic;
 using MelonLoader;
 using System.IO;
-[assembly: MelonInfo(typeof(BTD6_Marine_In_Shop.Class1), "Marine In Shop", "1.2.0", "kenx00x")]
+[assembly: MelonInfo(typeof(BTD6_Marine_In_Shop.Class1), "Marine In Shop", "1.2.1", "kenx00x")]
 [assembly: MelonGame("Ninja Kiwi", "BloonsTD6")]
 namespace BTD6_Marine_In_Shop
 {
@@ -18,7 +18,7 @@ namespace BTD6_Marine_In_Shop
     {
         public static string dir = $"{Directory.GetCurrentDirectory()}\\Mods\\MarineInShop";
         public static string config = $"{dir}\\config.txt";
-        public static int MarineCost = 2500;
+        public static int MarineCost = 150000;
         public override void OnApplicationStart()
         {
             MelonLogger.Log("Marine In Shop mod loaded");
@@ -41,7 +41,7 @@ namespace BTD6_Marine_In_Shop
                 MelonLogger.Log("Creating config file");
                 using (StreamWriter sw = File.CreateText(config))
                 {
-                    sw.WriteLine("MarineCost=2500");
+                    sw.WriteLine("MarineCost=150000");
                 }
                 MelonLogger.Log("Done Creating");
             }
